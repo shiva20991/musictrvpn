@@ -6,7 +6,7 @@ START_TEXT= "hey Test1"
 STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
-async def start(bot, update):
+async def start(bot: Bot, update: Update):
     await bot.send_message.reply_photo(
         STARTIMG,
         chat_id=update.chat.id,

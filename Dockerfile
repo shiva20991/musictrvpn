@@ -8,7 +8,7 @@ RUN apt-get update -y && \
         python3-pip \
         git \
         ffmpeg && \
-    git clone https://github.com/subinps/MusicPlayer-Heroku.git && \
+    git clone https://github.com/No-OnE-Kn0wS-Me/MusicPlayer-Heroku.git && \
     cd MusicPlayer-Heroku && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
     cd pytgcalls && \

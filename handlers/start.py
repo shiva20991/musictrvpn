@@ -11,13 +11,18 @@ async def start(client, message):
      reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("✅ Yes", switch_inline_query_current_chat=""),
-                    InlineKeyboardButton("No ❌", callback_data="close")
-                ],
-                [
-                    InlineKeyboardButton('Song Plays On', url='https://t.me/movielinks_only'),
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs')
+                    InlineKeyboardButton(
+                        '✅ Yes', switch_inline_query_current_chat=''
+                    ),
+                    InlineKeyboardButton(
+                        'No ❌', callback_data='close'
+                    ),
+                    InlineKeyboardButton(
+                        'Song Plays On', url='https://t.me/movielinks_only'
+                    ),
+                    InlineKeyboardButton(
+                        'Support Channel', url='https://t.me/Mai_bOTs'
+                    )
                 ]
             ]
         )
-    )

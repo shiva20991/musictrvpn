@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-PM_HELP_TEXT = "Hi I Can Play Songs On Voice Chats But I Only works On @movielinks_only \n How I Works? \n You Can Send A YouTube Video In [This](https://t.me/movielinks_only) Group Then Reply /play On That Link \n or You Can Send */play <Ytlink>* \n I also Works On Inline Too.. \n Bot Made By @mai_bots ♥️" 
+PM_HELP_TEXT = "Sorry You can't Use This Bot In Your Group" 
 
 @Client.on_message(filters.command(["help"]))
 async def help(client, message):

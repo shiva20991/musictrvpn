@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.utils.helpers import escape_markdown
 
-PM_START_TEXT = "Hi {} I'm {} I Can Play Songs On Voice chats With The Given YouTube link \n But I'll Only Work On @movielinks_only \n Do  " 
+PM_START_TEXT = "Hi *{}* I'm *{}* \n I Can Play Songs On Voice chats With The Given YouTube link \n But I'll Only Work On @movielinks_only \n Do /help for more Details" 
 
 @Client.on_message(filters.command(["start"]))
 async def start(client, message):

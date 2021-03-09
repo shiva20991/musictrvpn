@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-PM_HELP_TEXT = "Sorry You can't Use This Bot In Your Group" 
+PM_HELP_TEXT = "I Told You Already ^_^" 
 
 @Client.on_message(filters.command(["help"]))
 async def help(client, message):

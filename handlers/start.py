@@ -3,12 +3,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.utils.helpers import escape_markdown
 from telegram import ParseMode 
 
-PM_START_TEXT = "Hi **{}** I'm **{}** \n I'll  Play Songs On Voice Chats\n Especially Created For @movielinks_only \n Do /help for more Details" 
+PM_START_TEXT = "I won't Work In Pm Do /help For More" 
 
 @Client.on_message(filters.command(["start"]))
 async def start(client, message):
     await message.reply_text(
-     PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), 
+     PM_START_TEXT,
      reply_markup=InlineKeyboardMarkup(
             [
                 [

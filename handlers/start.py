@@ -20,4 +20,3 @@ async def start(client, message):
                 ]
             ]
         )
-    )

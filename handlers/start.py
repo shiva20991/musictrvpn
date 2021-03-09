@@ -11,12 +11,16 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 START_TEXT= "hey Test1" 
 STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 
+
 @run_async
-@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
-async def start(client: Client, update: Update):
-   await client.send_photo(
-        STARTIMG,
-        START_TEXT,
+def start(bot: Bot, update: Update):
+message = update.effective_message
+   message.reply_photo(
+         STARTIMG,
+        START_TEXT.format(
+       escape_markdown(first_name),
+        escape_markdown(
+         bot.first_name),
         reply_markup=InlineKeyboardMarkup(
             [
                 [

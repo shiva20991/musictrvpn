@@ -13,7 +13,7 @@ STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 
 @run_async
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
-async def start(bot: Bot, update: Update):
+async def start(message: Message, update: Update):
    await message.reply_photo(
         STARTIMG,
         START_TEXT,

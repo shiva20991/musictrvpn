@@ -16,7 +16,6 @@ STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 async def start(bot: Bot, update: Update):
    await Message.reply_photo(
         STARTIMG,
-        chat_id=update.chat.id,
         text=START_TEXT,
         reply_markup=InlineKeyboardMarkup(
             [

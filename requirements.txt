@@ -3,4 +3,4 @@ TgCrypto
 python-dotenv
 youtube_dl
 youtube_search_python
-python-telegram-bot==11.1.0
+python-telegram-bot

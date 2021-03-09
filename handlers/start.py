@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-@Client.on_message(Filters.command(["start"]))
+@Client.on_message(filters.command(["start"]))
 async def start(client, message):
     await message.reply_text(
         "💁🏻‍♂️ Do you want to search for a YouTube video?",

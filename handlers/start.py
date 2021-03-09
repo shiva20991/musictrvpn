@@ -1,40 +1,21 @@
-from telegram import Message, Chat, Update, Bot, User
-from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
-from telegram.error import Unauthorized, BadRequest, TimedOut, NetworkError, ChatMigrated, TelegramError
-from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryHandler
-from telegram.ext.dispatcher import run_async, DispatcherHandlerStop
-from telegram.utils.helpers import escape_markdown
-import pyrogram 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-START_TEXT= "Hi {}, my name is {}. " 
-STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 
-
-@run_async
-def start(bot: Bot, update: Update):
-message = update.effective_message
-   message.reply_photo(
-         STARTIMG,
-        START_TEXT.format(
-       escape_markdown(first_name),
-        escape_markdown(
-         bot.first_name),
+@Client.on_message(Filters.command(["start"]))
+async def start(client, message):
+    await message.reply_text(
+        "💁🏻‍♂️ Do you want to search for a YouTube video?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("✅ Yes", switch_inline_query_current_chat=""),
-                    InlineKeyboardButton("No ❌", callback_data="close")
-                ],
-                [
-                    InlineKeyboardButton('Song Plays On', url='https://t.me/movielinks_only'),
-                    InlineKeyboardButton('Channel', url='https://t.me/Mai_bOTs')
+                    InlineKeyboardButton(
+                        "✅ Yes", switch_inline_query_current_chat=""
+                    ),
+                    InlineKeyboardButton(
+                        "No ❌", callback_data="close"
+                    )
                 ]
             ]
-        ),
-        reply_to_message_id=update.message_id
+        )
     )
-
-start_handler = CommandHandler("start", start, pass_args=True)
-dispatcher.add_handler(start_handler)

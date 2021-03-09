@@ -8,7 +8,7 @@ import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-START_TEXT= "hey Test1" 
+START_TEXT= "Hi {}, my name is {}. " 
 STARTIMG = "https://telegra.ph/file/b3b965f9f77a4346d9df5.jpg"
 
 

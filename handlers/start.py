@@ -35,3 +35,6 @@ message = update.effective_message
         ),
         reply_to_message_id=update.message_id
     )
+
+start_handler = CommandHandler("start", start, pass_args=True)
+dispatcher.add_handler(start_handler)

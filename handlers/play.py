@@ -9,13 +9,8 @@ from config import DURATION_LIMIT
 from helpers.wrappers import errors
 from helpers.errors import DurationLimitError
 
-
-@Client.on_message(
-    filters.command("play")
-    & filters.group
-    & ~ filters.edited
-)
 @errors
+@Client.on_message(filters.command(["play"]))
 async def play(client: Client, message_: Message):
     audio = (message_.reply_to_message.audio or message_.reply_to_message.voice) if message_.reply_to_message else None
 

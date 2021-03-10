@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-PM_HELP_TEXT = "I Told You Already ^_^" 
+PM_HELP_TEXT = "Sorry You Can't Use Me!" 
 
 @Client.on_message(filters.command(["help"]))
 async def help(client, message):

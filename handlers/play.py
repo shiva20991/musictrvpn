@@ -63,7 +63,7 @@ async def play(client: Client, message_: Message):
 
     if is_playing:
         position = await sira.add(message_.chat.id, file_path)
-        await res.edit_text(f"Your Request Has Accepted And The Song Will Be Play At Position No: {position}.")
+        await res.edit_text(f"Your Request Has Been Accepted It'll Be Play At {position} th Position.")
     else:
         await res.edit_text("▶️ Playing... JOIN Voice Chats Now")
         tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)

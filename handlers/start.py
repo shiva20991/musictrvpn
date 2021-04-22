@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 @Client.on_message(
-    filters.command("start")
+    filters.command("trv")
     & filters.private
     & ~ filters.edited
 )
@@ -33,7 +33,7 @@ Use /help to know more about me.""",
 
 
 @Client.on_message(
-    filters.command("start")
+    filters.command("trv")
     & filters.group
     & ~ filters.edited
 )

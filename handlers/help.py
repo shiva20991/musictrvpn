@@ -10,12 +10,12 @@ async def help(client, message):
      reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs'),
-                    InlineKeyboardButton('Owner', url='https://t.me/No_OnE_Kn0wS_Me')
+                    InlineKeyboardButton('Support Channel', url='https://t.me/trvpn'),
+                    InlineKeyboardButton('Owner', url='https://t.me/trvpn')
                 ],
                 [
-                    InlineKeyboardButton('Song Plays On', url='https://t.me/movielinks_only'),
-                    InlineKeyboardButton('Source', url='https://github.com/No-OnE-Kn0wS-Me/MusicPlayer-Heroku')
+                    InlineKeyboardButton('Song Plays On', url='https://t.me/trvpn'),
+                    InlineKeyboardButton('Source', url='')
                 ]
             ]
         )

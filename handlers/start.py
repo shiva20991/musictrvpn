@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 @Client.on_message(
-    filters.command("sta")
+    filters.command("start")
     & filters.private
     & ~ filters.edited
 )
@@ -16,15 +16,15 @@ Use /help to know more about me.""",
             [
                 [
                     InlineKeyboardButton(
-                        "💠Source💠", url="https://github.com/No-OnE-Kn0wS-Me/MusicPlayer-Heroku"
+                        "💠Source💠", url=""
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/movielinks_only"
+                        "💬 Group", url="https://t.me/trvpn"
                     ),
                     InlineKeyboardButton(
-                        "Channel 🔈", url="https://t.me/Mai_bOTs"
+                        "Channel 🔈", url="https://t.me/trvpn"
                     )
                 ]
             ]
@@ -33,7 +33,7 @@ Use /help to know more about me.""",
 
 
 @Client.on_message(
-    filters.command("sta")
+    filters.command("start")
     & filters.group
     & ~ filters.edited
 )

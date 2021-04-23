@@ -2,7 +2,7 @@
 
 ## Note
 
-Neither this, or PyTgCalls are stable.
+Neither this, or PyTgCalls are fully stable.
 
 ## Requirements
 
@@ -13,24 +13,35 @@ Neither this, or PyTgCalls are stable.
 
 ## Deployment
 
-### HEROKU DEPLOYMENT
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+### Config
 
-Get STRING_NAME from here:
+Copy `example.env` to `.env` and fill it with your credentials.
 
-[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-yellowgreen)](https://repl.it/@subinps/getStringName)
+### Without Docker
 
-
-### NORMAL WAY
 1. Install Python requirements:
    ```bash
    pip install -r requirements.txt
    ```
-2. Copy `example.env` to `.env` and fill it with your credentials.
-3. Run:
+2. Run:
    ```bash
    python main.py
    ```
+
+### Using Docker
+
+1. Build:
+   ```bash
+   docker build -t musicplayer .
+   ```
+2. Run:
+   ```bash
+   docker run --env-file .env musicplayer
+   ```
+
+### Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shiva20991/Deploy-Musictrvpn)
+
 
 ## Credits
 
